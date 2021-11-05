@@ -18,7 +18,7 @@
 
 ### PWA(Progressive Web Apps)
 
----- PWA vs. native app 비교
+
 
 
 
@@ -38,31 +38,35 @@ JS의 단점을 보완
 
 SSR, SSG 선택해서 사용 가능
 
------ NextJS vs. GatsbyJS vs. CRA 비교
+NextJS
 
 #### Redux
 
----- Redux vs. mobx 비교
+Redux
 
 #### Redux-saga
 
-Redux-thunk vs. Redux-saga
+Redux-saga
 
 
 
 ### BE
 
-> Java Spring boot, Gradle
+> Java Spring boot, Gradle, lombok
 
 #### Java Spring boot
 
 국내에서 가장 많이 사용되는 BE 프레임워크
 
----- Java vs. Kotlin 비교
+Java
 
 #### Gradle
 
-Maven vs. Gradle
+Gradle
+
+#### lombok
+
+getter, setter 편하게
 
 
 
@@ -87,6 +91,8 @@ AWS amplify, Lambda
 
 
 ## 와이어 프레임
+
+![Wireframe](./images/wireframe.png)
 
 1. 가족 앨범 - 인스타 느낌...
 2. 숏컷 동영상 
