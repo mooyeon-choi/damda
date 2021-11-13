@@ -5,7 +5,7 @@ interface ILoginProps {
 
 const Login: React.FunctionComponent<ILoginProps> = (props) => {
   return (<div>
-      
+      test
   </div>);
 };
 
