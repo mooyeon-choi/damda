@@ -5,8 +5,7 @@ interface ILoginProps {
 
 const Login: React.FunctionComponent<ILoginProps> = (props) => {
   return (<div>
-      test
   </div>);
 };
 
-export default Login;
+export default Login
