@@ -1,4 +1,4 @@
-package damda.back.Dto;
+package damda.back.dto;
 
 import lombok.Data;
 

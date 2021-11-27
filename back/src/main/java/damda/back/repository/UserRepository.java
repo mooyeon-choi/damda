@@ -1,6 +1,6 @@
-package damda.back.Repository;
+package damda.back.repository;
 
-import damda.back.Entity.User;
+import damda.back.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
@@ -10,21 +10,21 @@ import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 
 @Repository
 public class UserRepository {
-    private final DynamoDbTable<User> userTable;
+    private final DynamoDbTable<Users> userTable;
 
     public UserRepository(@Autowired DynamoDbEnhancedClient dynamo) {
-        this.userTable = dynamo.table(User.TABLE_NAME, TableSchema.fromBean(User.class));
+        this.userTable = dynamo.table(Users.TABLE_NAME, TableSchema.fromBean(Users.class));
     }
 
-    public void save(User user) {
+    public void save(Users user) {
         userTable.putItem(user);
     }
 
-    public User get(String id) {
+    public Users get(String id) {
         return userTable.getItem(Key.builder().partitionValue(id).build());
     }
 
-    public void update(User user) {
+    public void update(Users user) {
         userTable.updateItem(user);
     }
 

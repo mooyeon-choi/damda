@@ -1,10 +1,9 @@
-package damda.back.Controller;
+package damda.back.controller;
 
 
-import damda.back.Dto.UserDto;
-import damda.back.Entity.User;
-import damda.back.Service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import damda.back.dto.UserDto;
+import damda.back.entity.Users;
+import damda.back.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,15 +16,15 @@ public class UserController {
     }
 
     @GetMapping("/login/{id}")
-    ResponseEntity<User> getUser(@PathVariable String id) {
+    ResponseEntity<Users> getUser(@PathVariable String id) {
         return userService.get(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping("/login")
-    ResponseEntity<User> saveUser(@RequestBody UserDto userDto) {
-        User user = User.builder()
+    ResponseEntity<Users> saveUser(@RequestBody UserDto userDto) {
+        Users user = Users.builder()
                 .id(userDto.getId())
                 .pw(userDto.getPw())
                 .build();
@@ -34,8 +33,8 @@ public class UserController {
     }
 
     @PutMapping("/login")
-    ResponseEntity<User> updateUser(@RequestBody UserDto userDto) {
-        User user = User.builder()
+    ResponseEntity<Users> updateUser(@RequestBody UserDto userDto) {
+        Users user = Users.builder()
                 .id(userDto.getId())
                 .pw(userDto.getPw())
                 .build();
@@ -44,7 +43,7 @@ public class UserController {
     }
 
     @DeleteMapping("/login/{id}")
-    ResponseEntity<User> deleteUser(@PathVariable String id) {
+    ResponseEntity<Users> deleteUser(@PathVariable String id) {
         userService.delete(id);
         return ResponseEntity.ok().build();
     }

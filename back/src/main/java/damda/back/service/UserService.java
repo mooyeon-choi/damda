@@ -1,7 +1,7 @@
-package damda.back.Service;
+package damda.back.service;
 
-import damda.back.Entity.User;
-import damda.back.Repository.UserRepository;
+import damda.back.entity.Users;
+import damda.back.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -14,15 +14,15 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void save(User user) {
+    public void save(Users user) {
         userRepository.save(user);
     }
 
-    public Optional<User> get(String id) {
+    public Optional<Users> get(String id) {
         return Optional.ofNullable(userRepository.get(id));
     }
 
-    public void update(User user) {
+    public void update(Users user) {
         userRepository.update(user);
     }
 

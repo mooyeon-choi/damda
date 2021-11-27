@@ -1,4 +1,4 @@
-package damda.back.Entity;
+package damda.back.entity;
 
 import lombok.*;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbAttribute;
@@ -10,7 +10,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbParti
 @AllArgsConstructor
 @NoArgsConstructor
 @DynamoDbBean
-public class User {
+public class Users {
     public static final String TABLE_NAME = "Users";
 
     @Getter(onMethod_ = {@DynamoDbPartitionKey, @DynamoDbAttribute("id")})
