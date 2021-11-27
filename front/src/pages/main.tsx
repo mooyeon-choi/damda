@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { FC } from 'react';
 import logo from './../damdaticon.png';
 import styled from 'styled-components';
 
@@ -17,7 +17,7 @@ const Wrapper = styled.section`
   background: papayawhip;
 `;
 
-const Main: React.FunctionComponent<IMainProps> = (props) => {
+const Main: FC<IMainProps> = (props) => {
   return (<Wrapper>
     <img src={logo} className="App-logo" alt="logo" />
     <p>
