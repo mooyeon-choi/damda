@@ -31,3 +31,11 @@ You will also see any lint errors in the console.
 ```bash
 yarn add history@5 react-router-dom@6
 ```
+
+### Formik
+
+> React Native에서 컴포넌트를 빌드하기 위한 React 구성 요소 및 hook들의 작은 그룹
+
+### Yup
+
+> 구문 분석 및 유효성 검사
